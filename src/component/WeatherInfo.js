@@ -18,7 +18,6 @@ const Weather = ({ city, state }) => {
                    city ? (
                     <>
                     <div className="mid"> 
-                    
                     <img src={api.getIcon(weather[0].icon)} />
                     <h3 className="temp">{main.temp} °C</h3>
                     <h2 className="location"><i className="fa-solid fa-street-view icon"></i> {name}</h2>
