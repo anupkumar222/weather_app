@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Project description
 
-This is a weather information app, built using reactjs with redux and CSS. It includes features like get weather details such as temperature, maximum temperature, minimum temperature, weather condition etc by providing city name and by device location.
+This is a weather information app, built using reactjs, hooks and CSS. It includes features like get weather details such as temperature, maximum temperature, minimum temperature, weather condition etc by providing city name and by device location.
 
 ## How to run
 
