@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import api from '../utils/api';
 import Weather from './WeatherInfo';
 
@@ -10,9 +10,10 @@ const TempApp = () => {
     const [togglePage, setTogglePage] = useState(false);
 
 
-    function state() {
+    const hidePage = () => {
         setTogglePage(false)
     }
+
     const fetchApi = async ({ city = '', lat = '', lon = '' }) => {
         const url = api.getWeatherDetails({ city, lat, lon })
         const response = await fetch(url);
@@ -51,8 +52,8 @@ const TempApp = () => {
         }
     }
 
-    const { main = {}, name, weather } = city;
-    if (togglePage) return <Weather city={city} state={state} />;
+   
+    if (togglePage) return <Weather city={city} hidePage={hidePage} />;
 
     return (
         <>
