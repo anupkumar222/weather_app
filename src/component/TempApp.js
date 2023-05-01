@@ -6,11 +6,13 @@ const TempApp = () => {
 
     const [city, setCity] = useState({});
     const [status, setStatus] = useState("");
-    const [search, setSearch] = useState("Mumbai");
+    const [search, setSearch] = useState(null);
     const [togglePage, setTogglePage] = useState(false);
 
 
     const hidePage = () => {
+        setSearch(null)
+        setStatus(null)
         setTogglePage(false)
     }
 
@@ -48,8 +50,9 @@ const TempApp = () => {
 
     const handleSearch = (event) => {
         if (event.keyCode === 13) {
-            fetchApi({ city: search });
+            fetchApi({ city: search })  ;
         }
+        
     }
 
    
@@ -60,7 +63,7 @@ const TempApp = () => {
             <div className="main">
                 <center>
                     <div className="box container">
-                        <h1>Weather App</h1>
+                        <h1 className="head">Weather App</h1>
                         <hr></hr>
                         <div className="inputData">
                             <input
